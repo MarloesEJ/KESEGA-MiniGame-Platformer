@@ -7404,11 +7404,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &308671318 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9070024130028981509, guid: fb85a160919dcd04284633984d4fbb51, type: 3}
-  m_PrefabInstance: {fileID: 4711285411345309247}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &327380847
 GameObject:
   m_ObjectHideFlags: 0
@@ -8011,6 +8006,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 917533072}
+  - component: {fileID: 917533073}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -8037,9 +8033,27 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 22, y: -44.845}
+  m_AnchoredPosition: {x: 22, y: -42}
   m_SizeDelta: {x: 412.67, y: 99.999}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &917533073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917533071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9df6a062352ba49b1649ffb2061d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthUI
+  hearts:
+  - {fileID: 1651646702}
+  - {fileID: 1786958534}
+  - {fileID: 1339926448}
+  fullHeart: {fileID: 21300000, guid: 17623ca136d4a1a4680dc2444bd6c1e2, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 20530af33b872bf48975fe0ea8166c66, type: 3}
 --- !u!1 &924263229
 GameObject:
   m_ObjectHideFlags: 0
@@ -11716,43 +11730,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7638045463794939015, guid: fb85a160919dcd04284633984d4fbb51, type: 3}
   m_PrefabInstance: {fileID: 4711285411345309247}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1046502361 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6944243323147221497, guid: fb85a160919dcd04284633984d4fbb51, type: 3}
-  m_PrefabInstance: {fileID: 4711285411345309247}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1046502362 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2460869236193219349, guid: fb85a160919dcd04284633984d4fbb51, type: 3}
-  m_PrefabInstance: {fileID: 4711285411345309247}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 308671318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceac91c737898884ea6ee4de28693e26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
---- !u!212 &1046502365 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1408426607220505240, guid: fb85a160919dcd04284633984d4fbb51, type: 3}
-  m_PrefabInstance: {fileID: 4711285411345309247}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1046502366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 308671318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa4d2327472bf44f8f42836662b7be4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  maxHealth: 3
-  animator: {fileID: 1046502361}
-  movementScript: {fileID: 1046502362}
-  spriteRenderer: {fileID: 1046502365}
 --- !u!1 &1119822946
 GameObject:
   m_ObjectHideFlags: 0
@@ -11984,7 +11961,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 109.99997, y: -0.00006580353}
+  m_AnchoredPosition: {x: 109.999954, y: -0.00006484985}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1339926448
@@ -12897,7 +12874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.000032, y: -0.00006580353}
+  m_AnchoredPosition: {x: -21.00003, y: -0.00006484985}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1786958534
@@ -13254,6 +13231,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 191410290609418071, guid: fb85a160919dcd04284633984d4fbb51, type: 3}
+      propertyPath: healthUI
+      value: 
+      objectReference: {fileID: 917533073}
     - target: {fileID: 7638045463794939015, guid: fb85a160919dcd04284633984d4fbb51, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.058
@@ -13305,10 +13286,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9070024130028981509, guid: fb85a160919dcd04284633984d4fbb51, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1046502366}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb85a160919dcd04284633984d4fbb51, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

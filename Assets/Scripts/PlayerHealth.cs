@@ -12,10 +12,13 @@ public class PlayerHealth : MonoBehaviour
     private bool _isDead = false;
 
     public SpriteRenderer spriteRenderer;
+    public HealthUI healthUI;
 
     void Start()
     {
+        maxHealth = healthUI.hearts.Length; // Zorg ervoor dat maxHealth overeenkomt met het aantal harten in de UI
         currentHealth = maxHealth;
+        healthUI.UpdateHealth(currentHealth);
     }
 
     public void TakeDamage(int damage)
@@ -23,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
         if (_isDead) return;
 
         currentHealth -= damage;
+        healthUI.UpdateHealth(currentHealth);
         Debug.Log("Player took damage. Current health: " + currentHealth);
 
         if (currentHealth <= 0)

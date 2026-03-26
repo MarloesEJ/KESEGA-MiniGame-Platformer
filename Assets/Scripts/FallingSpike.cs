@@ -29,4 +29,19 @@ public class FallingSpike : MonoBehaviour
         Vector3 localEndPoint = Vector3.down * detectionDistance;
         Gizmos.DrawLine(Vector3.zero, localEndPoint);
     }
+
+    // private void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if (collision.collider.CompareTag("Player"))
+    //     {
+    //         Debug.Log("Player hit by falling spike!");
+    //         PlayerHealth playerHealth = collision.collider.GetComponent<PlayerHealth>();
+    //         if (playerHealth != null)
+    //         {
+    //             playerHealth.TakeDamage(1); // Geef de speler 1 schade
+    //         }
+
+    //         Destroy(gameObject, 0.1f); // Vernietig de spike na het raken van de speler
+    //     }
+    // }
 }

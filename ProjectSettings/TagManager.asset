@@ -6,6 +6,7 @@ TagManager:
   tags:
   - spikes
   - Mud
+  - Enemy
   layers:
   - Default
   - TransparentFX
